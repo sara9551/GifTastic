@@ -1,0 +1,38 @@
+body{
+
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.text-white {
+    background-color: #4aaaa5 !important;
+}
+
+ul nav.navbar-nav.navbar-right {
+    position: right !important;
+}
+
+.container {
+    position: relative !important;
+    margin: 0 auto !important;
+    width: 960px !important;
+    font-size: 15px;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    text-align: justify;
+}
+
+.navbar.navbar-light.bg-light {
+    width: 100%;
+    background-color: #666666 !important;
+    padding: 0px;
+    border-top: 10px solid #4aaaa5;
+}
+
+.navbar-brand.mb-1.h1 {
+    margin-left: 350px;
+    font-size: 60px;
+}
+
+#buttons {
+    position: inherit;
+}
