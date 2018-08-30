@@ -39,7 +39,8 @@ ul nav.navbar-nav.navbar-right {
 
 .container3 {
     position: relative !important;
-    margin: 0 auto !important;
+    margin-top: 50px;
+    margin-left: 30px;
     width: 500px !important;
 }
 

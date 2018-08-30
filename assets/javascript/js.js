@@ -4,7 +4,7 @@ $(document).ready(function () {
 
   function renderButtons() {
 
-    $("#button").empty();
+    $("#buttons-view").empty();
 
     for (var i = 0; i < topics.length; i++) {
 
@@ -16,46 +16,47 @@ $(document).ready(function () {
 
       a.text(topics[i]);
 
-      $("#button").append(a);
+      $("#buttons-view").append(a);
     }
 
   };
 
   function displayFoodGiphy() {
 
-    // $("button").on("click", function () {
+    $("button").on("click", function () {
 
-    var food = $(this).data("person");
-    console.log(food);
-    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + food + "&api_key=U99VkwNS5zjeLiCzbwmkdXP2bdjBMNY4&limit=10"; // --> LIMIT TO 10 GIFS
+      var food = $(this).data("food");
+      console.log(food);
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + food + "&api_key=U99VkwNS5zjeLiCzbwmkdXP2bdjBMNY4&limit=10"; // --> LIMIT TO 10 GIFS
 
-    $.ajax({
-      url: queryURL,
-      method: "GET"
-    })
-      .then(function (response) {
-        
-        var results = response.data;
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      })
+        .then(function (response) {
 
-        for (var i = 0; i < results.length; i++) {
-          var giphyDiv = $("<div class='item'>");
+          var results = response.data;
 
-          var rating = results[i].rating;
+          for (var i = 0; i < results.length; i++) {
+            var giphyDiv = $("<div class='item'>");
 
-          var p = $("<p>").text("Rating: " + rating);
+            var rating = results[i].rating;
 
-          var foodImage = $("<img>");
-          foodImage.attr("src", results[i].images.fixed_height.url);
+            var p = $("<p>").text("Rating: " + rating);
 
-          giphyDiv.prepend(p);
-          giphyDiv.prepend(foodImage);
+            var foodImage = $("<img>");
+            foodImage.attr("src", results[i].images.fixed_height.url);
 
-          $("#gifs-appear-here").prepend(giphyDiv);
+            giphyDiv.prepend(p);
+            giphyDiv.prepend(foodImage);
 
-        }
-      });
+            $("#gifs-appear-here").prepend(giphyDiv);
+
+          }
+        });
+    });
   }
-  // });
+
 
   $("#add-food").on("click", function (event) {
     event.preventDefault();
@@ -68,7 +69,7 @@ $(document).ready(function () {
     renderButtons();
   });
 
-  $(document).on("click", ".get-giphy", displayFoodGiphy);
+  $(document).on("click", "#buttons-view", displayFoodGiphy);
 
   renderButtons();
 
