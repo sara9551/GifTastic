@@ -36,3 +36,15 @@ ul nav.navbar-nav.navbar-right {
 #buttons {
     position: inherit;
 }
+
+.container3 {
+    position: relative !important;
+    margin: 0 auto !important;
+    width: 500px !important;
+}
+
+.container2 {
+    position: relative !important;
+    width: 500px !important;
+    margin-top: 50px;
+}
