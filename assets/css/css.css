@@ -3,7 +3,7 @@ body{
 }
 
 nav.navbar.navbar-expand-lg.navbar-dark.bg-dark.text-white {
-    background-color: #4aaaa5 !important;
+    background-color: #84a3c3 !important;
 }
 
 ul nav.navbar-nav.navbar-right {
@@ -25,7 +25,7 @@ ul nav.navbar-nav.navbar-right {
     width: 100%;
     background-color: #666666 !important;
     padding: 20px;
-    border-top: 10px solid #4aaaa5;
+    border-top: 10px solid #84a3c3;
 }
 
 .navbar-brand.mb-1.h1 {
@@ -47,7 +47,7 @@ ul nav.navbar-nav.navbar-right {
 }
 
 .foodImage {
-    background-color: #4aaaa5 !important;
+    background-color: #84a3c3 !important;
     color: white;
     margin: 2px;
 }
